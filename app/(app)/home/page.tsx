@@ -1,12 +1,19 @@
+import Link from "next/link";
 import {
   EventCardCompact,
   EventCardFeatured,
 } from "@/components/event/EventCard";
 import { BrandHeader } from "@/components/shell/TopHeader";
-import { IconBell, IconSparkles } from "@/components/ui/icons";
+import { AcademicItemCard } from "@/components/academic/AcademicItemCard";
+import {
+  IconBell,
+  IconChevronRight,
+  IconSparkles,
+} from "@/components/ui/icons";
 import { WipBadge } from "@/components/ui/WipBadge";
 import { events, getFeaturedEvents, getUpcomingEvents } from "@/lib/data/events";
 import { currentProfile } from "@/lib/data/profile";
+import { getUpcomingAcademicItems } from "@/lib/data/academic";
 
 export default function HomePage() {
   const upcoming = getUpcomingEvents();
@@ -15,6 +22,7 @@ export default function HomePage() {
     (e) => !featured.some((f) => f.id === e.id),
   );
   const udlExclusives = events.filter((e) => e.isUdlExclusive);
+  const academicItems = getUpcomingAcademicItems().slice(0, 3);
 
   return (
     <>
@@ -40,8 +48,38 @@ export default function HomePage() {
       </div>
 
       <main className="flex-1 overflow-y-auto pb-4">
+        {/* AGENDA ACADÈMICA — destacat */}
+        {academicItems.length > 0 && (
+          <section className="px-6 mb-6 animate-fade-up">
+            <Link
+              href="/agenda"
+              className="block rounded-3xl border border-[var(--border)] bg-gradient-to-br from-[var(--accent)]/8 to-transparent p-4 active:scale-[0.99] transition"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <div>
+                  <div className="text-[10px] uppercase tracking-wider text-[var(--accent)] font-bold">
+                    Agenda EPS Informàtica
+                  </div>
+                  <div className="text-base font-bold mt-0.5">
+                    Pròximes entregues i exàmens
+                  </div>
+                </div>
+                <IconChevronRight
+                  size={18}
+                  className="text-[var(--text-tertiary)] shrink-0"
+                />
+              </div>
+              <div className="space-y-2">
+                {academicItems.map((item) => (
+                  <AcademicItemCard key={item.id} item={item} compact />
+                ))}
+              </div>
+            </Link>
+          </section>
+        )}
+
         {/* DESTACATS */}
-        <section className="px-6 space-y-3 animate-fade-up">
+        <section className="px-6 space-y-3 animate-fade-up [animation-delay:60ms]">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--text-secondary)] flex items-center gap-1.5">
               <IconSparkles

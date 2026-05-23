@@ -41,28 +41,20 @@ const bigBen: Organizer = {
   city: "Golmés (Lleida)",
 };
 
-// Imatges (Unsplash, lliures de drets, temàtica club/festa/concert)
+// Imatges via picsum.photos amb seed deterministic — sempre carreguen,
+// nunca rate-limit ni hotlink restrictions. Quan tinguem promotors reals
+// onboardats, els pujaran fotos pròpies al Supabase Storage.
 const IMG = {
-  teteo:
-    "https://images.unsplash.com/photo-1571266028243-d220c6a4f6dd?q=80&w=1200&auto=format",
-  biloba:
-    "https://images.unsplash.com/photo-1574391884720-bbc049ec09ad?q=80&w=1200&auto=format",
-  manolita:
-    "https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?q=80&w=1200&auto=format",
-  lanuit:
-    "https://images.unsplash.com/photo-1493676304819-0d7a8d026dcf?q=80&w=1200&auto=format",
-  lemon:
-    "https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=1200&auto=format",
-  promofarra:
-    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=1200&auto=format",
-  cafeTeatre:
-    "https://images.unsplash.com/photo-1511192336575-5a79af67a629?q=80&w=1200&auto=format",
-  welcomeWeek:
-    "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format",
-  festaMajor:
-    "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format",
-  bigBen:
-    "https://images.unsplash.com/photo-1605723517503-3cadb5818a0c?q=80&w=1200&auto=format",
+  teteo: "https://picsum.photos/seed/teteo-cal-teo-club/800/500",
+  biloba: "https://picsum.photos/seed/biloba-electronic-festival/800/500",
+  manolita: "https://picsum.photos/seed/manolita-indie-concert/800/500",
+  lanuit: "https://picsum.photos/seed/lanuit-disco-lights/800/500",
+  lemon: "https://picsum.photos/seed/lemon-reggaeton-party/800/500",
+  promofarra: "https://picsum.photos/seed/promofarra-udl-students/800/500",
+  cafeTeatre: "https://picsum.photos/seed/jazz-quartet-stage/800/500",
+  welcomeWeek: "https://picsum.photos/seed/udl-campus-students/800/500",
+  festaMajor: "https://picsum.photos/seed/festa-major-crowd/800/500",
+  bigBen: "https://picsum.photos/seed/bigben-disco-reopening/800/500",
 };
 
 // Dates relatives a "ara" (23 maig 2026)

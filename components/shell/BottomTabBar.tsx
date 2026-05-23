@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
+  IconCalendar,
   IconHome,
   IconMap,
   IconTicket,
@@ -12,7 +13,8 @@ import { cn } from "@/lib/utils";
 
 const TABS = [
   { href: "/home", label: "Inici", Icon: IconHome },
-  { href: "/discounts", label: "Descomptes", Icon: IconMap },
+  { href: "/agenda", label: "Agenda", Icon: IconCalendar },
+  { href: "/discounts", label: "Mapa", Icon: IconMap },
   { href: "/tickets", label: "Entrades", Icon: IconTicket },
   { href: "/profile", label: "Perfil", Icon: IconUser },
 ] as const;
@@ -22,7 +24,7 @@ export function BottomTabBar() {
 
   return (
     <nav className="sticky bottom-0 z-30 glass border-t border-[var(--border)]">
-      <div className="grid grid-cols-4 px-2 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
+      <div className="grid grid-cols-5 px-1 pt-2 pb-[max(0.75rem,env(safe-area-inset-bottom))]">
         {TABS.map(({ href, label, Icon }) => {
           const active = pathname.startsWith(href);
           return (

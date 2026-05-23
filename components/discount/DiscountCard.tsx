@@ -116,7 +116,7 @@ export function DiscountCard({ discount }: { discount: Discount }) {
 
         {discount.totalRedeemed > 0 && (
           <div className="text-[10px] font-mono text-[var(--text-tertiary)] pt-0.5">
-            {discount.totalRedeemed} estudiants ja l&apos;han fet servir
+            {`${discount.totalRedeemed.toLocaleString("ca-ES")} estudiants ja l'han fet servir`}
           </div>
         )}
       </div>

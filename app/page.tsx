@@ -32,17 +32,18 @@ export default function Home() {
           </h1>
 
           <p className="text-[var(--text-secondary)] text-lg leading-relaxed">
-            Entrades a TETEO, Biloba o la Festa Major. Descomptes a
-            Caselles, Funatic o als gimnasos de Cappont. L&apos;agenda
-            del curs. Tot en un lloc, només per a la comunitat
-            universitària de Lleida.
+            Entrades a TETEO o la Festa Major. Descomptes a Caselles,
+            Funatic o als gimnasos de Cappont. La teva agenda
+            d&apos;exàmens i entregues. Tot en un lloc, només per a la
+            comunitat universitària de Lleida.
           </p>
 
           {/* Feature pills */}
-          <div className="grid grid-cols-3 gap-2 pt-2">
+          <div className="grid grid-cols-4 gap-1.5 pt-2">
             <FeaturePill emoji="🎟️" label="Entrades" />
             <FeaturePill emoji="🏷️" label="Descomptes" />
-            <FeaturePill emoji="📅" label="Agenda" />
+            <FeaturePill emoji="📝" label="Exàmens" />
+            <FeaturePill emoji="🎓" label="TFG" />
           </div>
         </div>
 
