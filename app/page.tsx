@@ -49,15 +49,27 @@ export default function Home() {
         {/* CTA */}
         <div className="space-y-4 pt-12 animate-fade-up [animation-delay:120ms]">
           <Link
-            href="#"
-            className="block w-full text-center py-4 rounded-2xl bg-[var(--primary)] hover:bg-[var(--primary-hover)] transition-colors font-semibold text-white shadow-lg shadow-[var(--primary)]/20"
+            href="/home"
+            className="block w-full text-center py-4 rounded-2xl bg-[var(--primary)] hover:bg-[var(--primary-hover)] transition-colors font-semibold text-white shadow-lg shadow-[var(--primary)]/20 active:scale-[0.98]"
           >
-            Verifica el teu @alumnes.udl.cat
+            Entrar a la demo →
           </Link>
 
-          <p className="text-center text-xs text-[var(--text-tertiary)]">
-            Llançament: <span className="text-[var(--text-secondary)] font-mono">setembre 2026</span> · Jornada d&apos;Acollida UdL
-          </p>
+          <div className="text-center space-y-1">
+            <p className="text-xs text-[var(--text-tertiary)]">
+              En producció: verificació amb{" "}
+              <span className="font-mono text-[var(--text-secondary)]">
+                @alumnes.udl.cat
+              </span>
+            </p>
+            <p className="text-[11px] text-[var(--text-tertiary)]">
+              Llançament:{" "}
+              <span className="text-[var(--text-secondary)] font-mono">
+                setembre 2026
+              </span>{" "}
+              · Jornada d&apos;Acollida UdL
+            </p>
+          </div>
         </div>
       </main>
 
