@@ -115,7 +115,7 @@ export const events: EventItem[] = [
     startAt: inDays(14, 23, 0),
     endAt: inDays(15, 7, 0),
     venueName: "Biloba",
-    venueAddress: "Ivars d'Urgell (Lleida)",
+    venueAddress: "C/ Ivars d'Urgell, Lleida",
     organizer: bonoboGroup,
     coverImageUrl: IMG.biloba,
     capacityTotal: 2400,
